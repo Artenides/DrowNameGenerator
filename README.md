@@ -1,6 +1,6 @@
 # DrowNameGenerator
 
-[A magyar nyelvű instrukciókért görgess lentebb]
+[A magyar nyelvű instrukciókért görgess lentebb (for the instructions in Hungarian please scroll down)]
 
 ### Description
 A HTML/Javascript application that allows you to randomly generate drow names for your Dungeons and Dragons game. The application currently supports English and Hungarian languages.
@@ -14,6 +14,8 @@ A HTML/Javascript application that allows you to randomly generate drow names fo
 ### How to install?
 1. Click on the clone or download button at the upper right corner of the screend and select Download ZIP.
 2. Find the DrowNameGenerator folder in your local downloads and within that double click on drownames.html (this will start the application in your browser)
+
+
 
 
 

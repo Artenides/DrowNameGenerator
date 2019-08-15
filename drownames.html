@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Drow names generator by Artenides</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <script src="js/framework/jquery.min.js"></script>
+    <script src="js/framework/bootstrap.min.js"></script>
+
+
+    <script src="js/drownames.js"></script>
+    <script src="js/namedb.js"></script>
+    <script src="js/menu_lang.js"></script>	
+    <style>
+
+        .top-buffer { margin-top:20px; }
+
+    </style>
+    
+    <script>var language = 0; //default language is English</script>
+</head>
+<body>
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-10"><h2 id="title"></h2></div>
+        <div class="col-2">
+        <img id="lang_0" src="img/eng.png" class="language-selector"/>
+            <img id="lang_1" src="img/hun.png" class="language-selector"/>
+            </div>
+    </div>
+
+
+
+
+
+<div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="menu_generate">
+          
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        
+        <div class="row">
+    <table class="table">
+    <thead>
+    </thead>
+    <tbody>
+        <tr>
+        	<td id="num_of_names"><label class="mr-sm-2"></label></td>
+            <td>
+                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="num_of_names_select" name >
+                    <option selected value="1">1</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                </select>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        <tr/>    
+        <tr>
+            <td><label class="mr-sm-2 gender"></label> </td>
+            <td><label class="mr-sm-2 gender1"></label><input type="radio" checked="checked" name="genderOption1" value="female"/></td>
+            <td><label class="mr-sm-2 gender2"></label><input type="radio" name="genderOption1" value="male"/></td>
+        	<td></td>
+        	<td></td>
+        	<td></td>
+        </tr>
+        <tr>
+            <td id="names_by_class"><label class="mr-sm-2"></label> </td>
+            <td><label id="class1" class="mr-sm-2"></label><input type="radio" checked="checked" name="classOption" value="A"/></td>
+            <td><label id="class2"class="mr-sm-2"></label><input type="radio" name="classOption" value="C"/></td>
+            <td><label id="class3"class="mr-sm-2"></label><input type="radio" name="classOption" value="F"/></td>
+            <td><label id="class4"class="mr-sm-2"></label><input type="radio" name="classOption" value="R"/></td>
+            <td><label id="class5"class="mr-sm-2"></label><input type="radio" name="classOption" value="W"/></td>                                    
+        </tr>
+        <tr><td id="num_of_suffix"><label class="mr-sm-2"></label></td>
+            <td>
+                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="num_of_suffix_select">
+                    <option selected value="1">1</option>
+                    <option value="2">1-2</option>
+                    <option value="3">2-3</option>
+                </select>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+        <tr/>    
+     </tbody>   
+    </table>
+    </div>
+    
+    <div class="row">
+        <input id="button_generate" class="btn btn-primary"/>
+    </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+      <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="menu_manual">
+
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        
+        <div class="row mt-2">
+
+        <table class="table">
+            <thead>
+            </thead>
+            <tbody>
+            
+            <tr>
+            <td><label class="mr-sm-2 gender"></label> </td>
+            <td><label class="mr-sm-2 gender1"></label><input type="radio" checked="checked" name="genderOption2" value="female"/></td>
+            <td><label class="mr-sm-2 gender2"></label><input type="radio" name="genderOption2" value="male"/></td>
+        	<td></td>
+        	<td></td>
+        	<td></td>
+        	</tr>
+            
+            <tr>
+            <td><label class="mr-sm-2 bynameormeaning"></label> </td>
+            <td><label class="mr-sm-2 byname"></label><input type="radio" checked="checked" name="nameormeaning" value="byname"/></td>
+            <td><label class="mr-sm-2 bymeaning"></label><input type="radio" name="nameormeaning" value="bymeaning"/></td>
+        	<td></td>
+        	<td></td>
+        	<td></td>
+        	</tr>
+            
+         	<tr>
+         	<td>
+                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="prefix_select">
+                </select>
+            </td>
+            <td>
+                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="suffix_select">
+                </select>
+            </td>
+            <td>
+                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="suffix_select2">
+                </select>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+         	</tr>
+         
+
+         
+            </tbody>
+        </table>
+
+    </div>
+        <div class="row">
+        <input id="button_show" class="btn btn-primary"/>
+    </div>
+        
+      </div>
+    </div>
+  </div>
+    
+ </div>   
+    
+    
+    
+    
+    
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        
+        <button class="btn btn-link"  aria-expanded="false" id="menu_results">
+
+        </button>
+
+      </h5>
+    </div>
+    <div id="collapseThree"  aria-labelledby="headingThree">
+      <div class="card-body" id="messages">
+        
+      </div>
+    </div>
+  </div>  
+    
+
+</div>
+
+<script type="text/javascript">
+
+    jQuery(document).ready(function () {
+
+		updateMenuLanguage();
+		updatePrefixAndSuffixOptions("female", "byname", prefixes, suffixes);
+		
+    	
+    	jQuery(".language-selector").click(function(){
+    		
+    		var lang_id = $(this).attr("id").split("_");
+    		language = lang_id[1];
+    		updateMenuLanguage();
+    		
+    		updatePrefixAndSuffixOptions(jQuery('input[name=genderOption2]:checked').val(), jQuery('input[name=nameormeaning]:checked').val(), prefixes, suffixes);
+    	});
+    	
+    	
+    	jQuery('input[type=radio][name=nameormeaning]').change(function() {
+
+    		updatePrefixAndSuffixOptions(jQuery('input[name=genderOption2]:checked').val(), jQuery('input[name=nameormeaning]:checked').val(), prefixes, suffixes);
+    	});
+ 
+    	jQuery('input[name=genderOption2]').change(function() {
+
+    		updatePrefixAndSuffixOptions(jQuery('input[name=genderOption2]:checked').val(), jQuery('input[name=nameormeaning]:checked').val(), prefixes, suffixes);
+    	});
+
+        jQuery("#button_generate").click(function () {
+            
+            generateNames();
+
+        });
+        
+        jQuery("#button_show").click(function () {
+            
+            combineName();
+
+        });
+
+    });
+
+</script>
+</body>
+</html>
